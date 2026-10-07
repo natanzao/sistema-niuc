@@ -1,0 +1,469 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, Arial, sans-serif;
+  background: #08111f;
+  color: #f5f7fa;
+}
+
+button {
+  font: inherit;
+}
+
+.app {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top right, #183b62 0, transparent 35%),
+    linear-gradient(135deg, #08111f, #0d1b2e);
+}
+
+.inicio,
+.conteudo {
+  width: min(900px, 92%);
+  margin: 0 auto;
+}
+
+.inicio {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px 0;
+}
+
+/* ajustando posicionamento dos itens lá na inicial */
+.marca {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 3px;
+}
+
+.marca-icone {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  color: #08111f;
+  font-size: 30px;
+  margin: 0 auto 20px auto; /* Centralizado horizontalmente */
+}
+
+.marca span {
+  font-size: 14px;
+  letter-spacing: 4px;
+  opacity: 0.7;
+}
+
+.marca strong {
+  font-size: clamp(42px, 8vw, 76px);
+  line-height: 0.95;
+  letter-spacing: -3px;
+}
+
+.subtitulo {
+  max-width: 620px;
+  font-size: 20px;
+  line-height: 1.6;
+  color: #b9c7d8;
+  margin: 25px auto 30px auto; /* Centralizado horizontalmente */
+  text-align: center;
+}
+
+/* ajusatndo a margem para auto do card de xp */
+.xp-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+  padding: 22px;
+  max-width: 520px;
+  width: 100%;
+  margin: 0 auto 30px auto; /* Centralizado perfeitamente */
+  text-align: center;
+}
+
+.xp-card span {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #91a4bb;
+}
+
+.xp-card strong {
+  display: block;
+  font-size: 32px;
+  margin: 8px 0 15px;
+}
+
+.barra {
+  width: 100%;
+  height: 8px;
+  border-radius: 10px;
+  background: #26364a;
+  overflow: hidden;
+}
+
+.barra-progresso {
+  height: 100%;
+  background: #ffffff;
+  transition: width 0.4s ease;
+}
+
+.opcoes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.opcao {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.06);
+  color: white;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 18px;
+  align-items: center;
+  text-align: left;
+  transition: 0.2s;
+}
+
+.opcao:hover,
+.opcao:focus {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-2px);
+}
+
+.opcao-icone {
+  font-size: 32px;
+}
+
+.opcao strong,
+.opcao span {
+  display: block;
+}
+
+.opcao strong {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.opcao div span {
+  color: #9eafc2;
+  font-size: 14px;
+}
+
+.rodape {
+  margin-top: 45px;
+  color: #63758b;
+  font-size: 13px;
+  text-align: center;
+}
+
+.topo {
+  width: min(900px, 92%);
+  margin: 0 auto;
+  padding: 25px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topo button {
+  border: 0;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.topo span {
+  font-weight: bold;
+}
+
+.conteudo {
+  padding: 80px 0;
+  max-width: 750px;
+}
+
+.categoria {
+  color: #8fa8c4;
+  font-size: 12px;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+
+.conteudo h1 {
+  font-size: clamp(38px, 7vw, 64px);
+  line-height: 1;
+  letter-spacing: -2px;
+  margin: 15px 0 25px;
+}
+
+.conteudo > p {
+  font-size: 19px;
+  line-height: 1.7;
+  color: #b9c7d8;
+}
+
+.audio-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin: 35px 0;
+  padding: 25px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.audio-icon {
+  font-size: 35px;
+}
+
+.audio-card p {
+  margin-bottom: 0;
+  color: #9eafc2;
+}
+
+.botao-principal {
+  border: 0;
+  border-radius: 12px;
+  padding: 16px 24px;
+  background: white;
+  color: #08111f;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.botao-principal:hover,
+.botao-principal:focus {
+  transform: translateY(-2px);
+}
+
+.audio-controls {
+  display: flex;
+  gap: 12px;
+  margin: 35px 0;
+  flex-wrap: wrap;
+}
+
+.audio-controls button {
+  padding: 18px 25px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.07);
+  color: white;
+  cursor: pointer;
+}
+
+.audio-controls button:hover,
+.audio-controls button:focus {
+  background: rgba(255,255,255,0.15);
+}
+
+button:focus-visible {
+  outline: 3px solid white;
+  outline-offset: 3px;
+}
+
+@media (max-width: 700px) {
+  .opcoes {
+    grid-template-columns: 1fr;
+  }
+
+  .inicio {
+    padding: 35px 0;
+  }
+
+  .marca strong {
+    font-size: 50px;
+  }
+}
+
+/* --- COMPONENTES DO CATÁLOGO DE CONTEÚDOS --- */
+.grade-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.card-item {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.card-item h2 {
+  font-size: 20px;
+  margin: 0;
+  color: #ffffff;
+}
+
+.card-item p {
+  color: #9eafc2;
+  font-size: 15px;
+  line-height: 1.5;
+  margin: 0 0 12px 0;
+}
+
+.card-icone {
+  font-size: 32px;
+}
+
+.botao-concluir {
+  background: #10b981;
+  color: #042f2e;
+  margin-top: 15px;
+}
+
+.botao-concluir:hover,
+.botao-concluir:focus {
+  background: #34d399;
+}
+
+/* --- TELA DE CONCLUSÃO / CELEBRAÇÃO --- */
+.conteudo.centralizado {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+}
+
+.trofeu-icone {
+  font-size: 72px;
+  margin-bottom: 16px;
+  animation: pulsarTrofeu 1.2s ease-in-out infinite alternate;
+}
+
+@keyframes pulsarTrofeu {
+  from { transform: scale(1); }
+  to { transform: scale(1.08); }
+}
+
+.titulo-sucesso {
+  font-size: clamp(32px, 6vw, 54px) !important;
+  margin: 10px 0 25px 0 !important;
+}
+
+.recompensa-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 30px;
+  max-width: 480px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.tag-xp {
+  display: inline-block;
+  background: #10b981;
+  color: #042f2e;
+  font-size: 26px;
+  font-weight: 900;
+  padding: 6px 18px;
+  border-radius: 50px;
+  margin-bottom: 15px;
+}
+
+.recompensa-card p {
+  color: #b9c7d8;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 25px;
+}
+
+.progresso-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.total-xp-label {
+  font-size: 13px;
+  color: #8fa8c4;
+  letter-spacing: 1px;
+}
+
+.botoes-conclusao {
+  display: flex;
+  gap: 15px;
+}
+
+.audio-controls button.ativo {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: #ffffff;
+  outline: 2px solid #ffffff;
+}
+
+/* --- BOTÃO DE RESET DE XP & DICA DE NAVEGAÇÃO --- */
+.xp-card-topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.botao-reset-xp {
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #fca5a5;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.botao-reset-xp:hover,
+.botao-reset-xp:focus {
+  background: rgba(239, 68, 68, 0.35);
+  border-color: #ef4444;
+  color: #ffffff;
+}
+
+.dica-teclado {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px dashed rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  padding: 12px 16px;
+  margin: 0 auto 28px auto; /* Centralizado */
+  max-width: 620px;
+  text-align: center;
+}
+
+.dica-teclado span {
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+.dica-teclado strong {
+  color: #f1f5f9;
+}
+
+.botao-iniciar-grande {
+  font-size: 20px;
+  padding: 22px 36px;
+  margin-top: 30px;
+  border-radius: 16px;
+}
